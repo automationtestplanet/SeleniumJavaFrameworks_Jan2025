@@ -38,7 +38,7 @@ public class Hooks extends BaseClass {
 //			scenario.isFailed() // to check scenario pass or fail
 			File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 			byte[] fileByteArray = FileUtils.readFileToByteArray(screenshot);
-			scenario.attach(fileByteArray, "image/png", "screenshot");
+			scenario.attach(fileByteArray, "image/jpg", "screenshot");
 		} catch (Exception e) {
 			System.out.println("Exception Occured while attahing the screenshot to Scenario: " + e.getMessage());
 		}
